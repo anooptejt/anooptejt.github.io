@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://anooptejt.github.io"),
   title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
   description:
-    "Independent DevOps, platform engineering and AIOps consulting for Engineering Front Door platforms, GitOps, MLOps and cloud transformation.",
+    "DevOps, platform engineering and AIOps architecture portfolio featuring Engineering Front Door solutions, GitOps projects, technical writing and conference talks.",
   keywords: [
     "DevOps Architect",
     "Platform Engineering",
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     "MLOps",
     "GitOps",
     "Cloud Architecture",
+    "DevOps Speaker",
+    "Technical Writing",
   ],
   authors: [{ name: "Anoop Tej Thotapalli" }],
   openGraph: {

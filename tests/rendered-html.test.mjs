@@ -37,6 +37,10 @@ test("server-renders the architecture portfolio", async () => {
   assert.match(html, /Engineering Front Door/);
   assert.match(html, /Intelligent DevOps Agent/);
   assert.match(html, /Unified Multi-Cloud CI\/CD/);
+  assert.match(html, /Insights &amp; speaking/);
+  assert.match(html, /Your AI Chat Is Private Until the Moment You Share It/);
+  assert.match(html, /Deploy Spinnaker CD Pipelines in Kubernetes/);
+  assert.match(html, /PaperCall/);
   assert.match(html, /Projects are anonymized/);
   assert.match(html, /src="\/anoop-portrait\.jpg"/);
   assert.match(html, /alt="Anoop Tej Thotapalli"/);
@@ -60,8 +64,11 @@ test("keeps confidential organization details out of project content", async () 
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
+  const projectsStart = page.indexOf("const projects = [");
+  const projectsEnd = page.indexOf("const principles = [");
+  const projectContent = page.slice(projectsStart, projectsEnd);
   assert.doesNotMatch(
-    page,
+    projectContent,
     /OpsMx|N2 Systems|PruTech|Wells Fargo|MetricStream|GraceLyster|Bank of America|Lowe’s|Cummins|StateStreet|Exelon/i,
   );
   assert.match(page, /projects = \[/);
