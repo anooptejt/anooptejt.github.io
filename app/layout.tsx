@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anooptejt.github.io"),
-  title: "Anoop Tej Thotapalli | DevOps, Platform Engineering & AIOps",
+  title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
   description:
-    "Architecture portfolio exploring Engineering Front Door platforms, DevOps transformation, platform engineering, GitOps, MLOps and AIOps.",
+    "Independent DevOps, platform engineering and AIOps consulting for Engineering Front Door platforms, GitOps, MLOps and cloud transformation.",
   keywords: [
     "DevOps Architect",
     "Platform Engineering",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Anoop Tej Thotapalli" }],
   openGraph: {
     type: "website",
-    title: "Anoop Tej Thotapalli | Architecture Portfolio",
+    title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
     description: "Engineering systems, designed with intent.",
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anoop Tej Thotapalli | Architecture Portfolio",
+    title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
     description: "Engineering systems, designed with intent.",
     images: ["/og.png"],
   },

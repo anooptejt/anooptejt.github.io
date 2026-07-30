@@ -250,14 +250,24 @@ export default function Home() {
           <span className="brand-mark">AT</span>
           <span className="brand-name">
             Anoop Tej
-            <small>Architecture portfolio</small>
+            <small>Independent DevOps & AIOps Architect</small>
           </span>
         </a>
         <nav className="nav-links" aria-label="Primary navigation">
           <a href="#expertise">Expertise</a>
           <a href="#work">Selected work</a>
           <a href="#approach">Approach</a>
-          <a className="nav-cta" href="mailto:anooptejthotapalli@gmail.com">
+          <a
+            href="https://www.linkedin.com/in/anooptej-t-a3754b77"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            className="nav-cta"
+            href="mailto:anooptejthotapalli@gmail.com?subject=Freelance%20Architecture%20Enquiry"
+          >
             Start a conversation
           </a>
         </nav>
@@ -316,7 +326,7 @@ export default function Home() {
               <span className="portrait-accent" aria-hidden="true" />
             </div>
             <figcaption>
-              <span>Principal architect</span>
+              <span>Independent architect</span>
               <strong>Anoop Tej Thotapalli</strong>
               <small>Bengaluru · Working globally</small>
             </figcaption>
@@ -632,10 +642,29 @@ export default function Home() {
               adopt and operate.
             </p>
           </div>
-          <a className="contact-button" href="mailto:anooptejthotapalli@gmail.com">
-            <span>Start a conversation</span>
-            <strong aria-hidden="true">↗</strong>
-          </a>
+          <div className="contact-actions">
+            <a
+              className="contact-button"
+              href="mailto:anooptejthotapalli@gmail.com?subject=Freelance%20Architecture%20Enquiry"
+            >
+              <span>Email Anoop</span>
+              <strong aria-hidden="true">↗</strong>
+            </a>
+            <a
+              className="contact-secondary"
+              href="https://www.linkedin.com/in/anooptej-t-a3754b77"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Connect on LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              className="contact-secondary"
+              href="mailto:anooptejthotapalli@gmail.com?subject=Freelance%20Architecture%20Enquiry"
+            >
+              anooptejthotapalli@gmail.com
+            </a>
+          </div>
         </section>
       </div>
 
@@ -644,14 +673,23 @@ export default function Home() {
           <span className="brand-mark">AT</span>
           <p>
             <strong>Anoop Tej Thotapalli</strong>
-            DevOps · Platform Engineering · AIOps
+            Independent DevOps · Platform Engineering · AIOps
           </p>
         </div>
         <p className="footer-note">
-          An anonymized portfolio of architecture work. Bengaluru, India ·
-          Available for global and remote opportunities.
+          Independent architecture consulting for engineering platforms,
+          delivery transformation and intelligent operations. Bengaluru, India.
         </p>
-        <a href="#top">Back to top ↑</a>
+        <div className="footer-links">
+          <a
+            href="https://www.linkedin.com/in/anooptej-t-a3754b77"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+          <a href="#top">Back to top ↑</a>
+        </div>
       </footer>
     </main>
   );

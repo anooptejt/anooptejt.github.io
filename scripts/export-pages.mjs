@@ -29,7 +29,12 @@ if (!response.ok) {
   throw new Error(`Static export failed with status ${response.status}`);
 }
 
-await writeFile(new URL("index.html", outputRoot), await response.text());
+const serverRenderedHtml = await response.text();
+const staticHtml = serverRenderedHtml
+  .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+  .replace(/<link\b[^>]*rel=["']modulepreload["'][^>]*>/gi, "");
+
+await writeFile(new URL("index.html", outputRoot), staticHtml);
 await writeFile(new URL(".nojekyll", outputRoot), "");
 
 console.log("GitHub Pages export created in dist-pages.");

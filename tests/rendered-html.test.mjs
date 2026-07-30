@@ -31,7 +31,7 @@ test("server-renders the architecture portfolio", async () => {
   const html = await response.text();
   assert.match(
     html,
-    /<title>Anoop Tej Thotapalli \| DevOps, Platform Engineering &amp; AIOps<\/title>/i,
+    /<title>Anoop Tej Thotapalli \| Independent DevOps &amp; AIOps Architect<\/title>/i,
   );
   assert.match(html, /Engineering systems,/);
   assert.match(html, /Engineering Front Door/);
@@ -40,7 +40,15 @@ test("server-renders the architecture portfolio", async () => {
   assert.match(html, /Projects are anonymized/);
   assert.match(html, /src="\/anoop-portrait\.jpg"/);
   assert.match(html, /alt="Anoop Tej Thotapalli"/);
-  assert.match(html, /mailto:anooptejthotapalli@gmail\.com/);
+  assert.match(
+    html,
+    /mailto:anooptejthotapalli@gmail\.com\?subject=Freelance%20Architecture%20Enquiry/,
+  );
+  assert.match(
+    html,
+    /https:\/\/www\.linkedin\.com\/in\/anooptej-t-a3754b77/,
+  );
+  assert.match(html, /Independent DevOps &amp; AIOps Architect/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 
