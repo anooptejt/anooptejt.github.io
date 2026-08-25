@@ -11,9 +11,23 @@ export type Publication = {
 export const publications: Publication[] = [
   {
     featured: true,
+    topic: "Digital wellbeing",
+    date: "August 2026",
+    publishedAt: "2026-08-18",
+    title: "The Phone Is Not Just Taking Our Time. It Is Taking Our Presence.",
+    text: "A reflection on how constant phone use fragments attention, drains energy and reduces the presence that families and children need.",
+    links: [
+      {
+        label: "Read on Medium",
+        href: "https://anoopt0106.medium.com/the-phone-is-not-just-taking-our-time-it-is-taking-our-presence-72ead5a224f6",
+      },
+    ],
+  },
+  {
+    featured: true,
     topic: "Responsible AI",
     date: "July 2026",
-    publishedAt: "2026-07-02",
+    publishedAt: "2026-07-27",
     title: "Your AI Chat Is Private Until the Moment You Share It",
     text: "A practical look at how shared AI conversations become public pages, and how teams can exchange useful knowledge without exposing raw chat history.",
     links: [
@@ -31,7 +45,7 @@ export const publications: Publication[] = [
     featured: true,
     topic: "DevOps practice",
     date: "July 2026",
-    publishedAt: "2026-07-01",
+    publishedAt: "2026-07-18",
     title: "DevOps Is Not Just Tools: Learning the Tool vs Practising the Job",
     text: "Why certifications open the door, while architecture thinking, ownership, release judgement and recovery planning build real capability.",
     links: [
@@ -48,7 +62,7 @@ export const publications: Publication[] = [
   {
     topic: "Education",
     date: "June 2026",
-    publishedAt: "2026-06-02",
+    publishedAt: "2026-06-09",
     title: "Are We Feeding Our Children Intellectual Junk Food, And Calling It Progress?",
     text: "A reflection on micro-learning, deep education and the quiet erosion of our capacity to think difficult things through.",
     links: [
@@ -76,10 +90,9 @@ export const publications: Publication[] = [
     ],
   },
   {
-    featured: true,
     topic: "Agentic operations",
     date: "April 2026",
-    publishedAt: "2026-04-01",
+    publishedAt: "2026-04-07",
     title: "When AI Stopped Watching and Started Acting",
     text: "How DevOps is moving from reactive observation toward predictive, context-aware and carefully governed action.",
     links: [
@@ -92,7 +105,7 @@ export const publications: Publication[] = [
   {
     topic: "AIOps",
     date: "January 2026",
-    publishedAt: "2026-01-01",
+    publishedAt: "2026-01-16",
     title: "From Red Alerts to Green Lights: A DevOps Engineer’s Journey with AI",
     text: "A practitioner’s journey from late-night incident response toward systems that diagnose, recommend and recover with human oversight.",
     links: [
@@ -105,7 +118,7 @@ export const publications: Publication[] = [
   {
     topic: "Spinnaker",
     date: "February 2021",
-    publishedAt: "2021-02-02",
+    publishedAt: "2021-02-04T12:07:30.908Z",
     title: "Integrate AWS ECS with Spinnaker",
     text: "A technical guide to connecting an AWS ECS delivery target with a Spinnaker deployment workflow.",
     links: [
@@ -118,7 +131,7 @@ export const publications: Publication[] = [
   {
     topic: "Spinnaker",
     date: "February 2021",
-    publishedAt: "2021-02-01",
+    publishedAt: "2021-02-04T12:03:12.617Z",
     title: "How to Integrate AWS with Spinnaker",
     text: "A foundational walkthrough for configuring AWS services as part of a Spinnaker continuous-delivery environment.",
     links: [

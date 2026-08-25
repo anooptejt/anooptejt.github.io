@@ -38,6 +38,10 @@ test("server-renders the architecture portfolio", async () => {
   assert.match(html, /Intelligent DevOps Agent/);
   assert.match(html, /Unified Multi-Cloud CI\/CD/);
   assert.match(html, /Writing &amp; talks/i);
+  assert.match(
+    html,
+    /The Phone Is Not Just Taking Our Time\. It Is Taking Our Presence\./,
+  );
   assert.match(html, /Your AI Chat Is Private Until the Moment You Share It/);
   assert.match(html, /Browse all writing, field notes &amp; talks/);
   assert.match(html, /Hire me on Fiverr/);
@@ -75,6 +79,10 @@ test("server-renders the complete writing and talks archive", async () => {
   );
   assert.match(html, /DevOps, platform engineering and AIOps insights/);
   assert.match(html, /Long-form thinking and practical guidance/);
+  assert.match(
+    html,
+    /The Phone Is Not Just Taking Our Time\. It Is Taking Our Presence\./,
+  );
   assert.match(html, /How to Integrate AWS with Spinnaker/);
   assert.match(html, /Old-School Log Analysis Challenge/);
   assert.match(html, /Deploy Spinnaker CD Pipelines in Kubernetes/);

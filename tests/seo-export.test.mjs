@@ -37,7 +37,10 @@ test("exports unique Insights metadata and collection structured data", async ()
   assert.match(html, /<meta property="og:url" content="https:\/\/anooptejt\.github\.io\/insights\/"/);
   assert.equal(documents.length, 1);
   assert.ok(documents[0]["@graph"].some((item) => item["@type"] === "CollectionPage"));
-  assert.ok(documents[0]["@graph"].some((item) => item["@type"] === "ItemList"));
+  const itemList = documents[0]["@graph"].find((item) => item["@type"] === "ItemList");
+  assert.ok(itemList);
+  assert.equal(itemList.numberOfItems, 20);
+  assert.match(JSON.stringify(itemList), /The Phone Is Not Just Taking Our Time/);
   assert.ok(documents[0]["@graph"].some((item) => item["@type"] === "BreadcrumbList"));
   assert.doesNotMatch(html, /—|–/);
 });
