@@ -39,7 +39,10 @@ for (const route of routes) {
 
   const serverRenderedHtml = await response.text();
   const staticHtml = serverRenderedHtml
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(
+      /<script\b(?![^>]*\btype=["']application\/ld\+json["'])[^>]*>[\s\S]*?<\/script>/gi,
+      "",
+    )
     .replace(/<link\b[^>]*rel=["']modulepreload["'][^>]*>/gi, "");
 
   await mkdir(new URL("./", route.output), { recursive: true });
@@ -47,5 +50,39 @@ for (const route of routes) {
 }
 
 await writeFile(new URL(".nojekyll", outputRoot), "");
+
+const deploymentDate = new Date().toISOString().slice(0, 10);
+const sitemapEntries = [
+  "  <url>",
+  "    <loc>https://anooptejt.github.io/</loc>",
+  `    <lastmod>${deploymentDate}</lastmod>`,
+  "  </url>",
+  "  <url>",
+  "    <loc>https://anooptejt.github.io/insights/</loc>",
+  `    <lastmod>${deploymentDate}</lastmod>`,
+  "  </url>",
+].join("\n");
+
+await writeFile(
+  new URL("sitemap.xml", outputRoot),
+  [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    sitemapEntries,
+    "</urlset>",
+    "",
+  ].join("\n"),
+);
+
+await writeFile(
+  new URL("robots.txt", outputRoot),
+  [
+    "User-agent: *",
+    "Allow: /",
+    "",
+    "Sitemap: https://anooptejt.github.io/sitemap.xml",
+    "",
+  ].join("\n"),
+);
 
 console.log("GitHub Pages export created in dist-pages.");

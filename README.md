@@ -11,6 +11,24 @@ Articles, field notes, talks and professional profile links live in
 `publishedAt` value. Set `featured: true` on the three entries you want on the
 homepage. The `/insights/` page displays the complete archive in date order.
 
+## SEO maintenance
+
+Shared identity and structured data live in `app/seo.ts`. Page-specific titles,
+descriptions, canonical URLs and social metadata live beside each page. The
+static export creates `sitemap.xml` and `robots.txt`, and preserves JSON-LD in
+the generated HTML.
+
+When adding a new public page:
+
+1. Give it one descriptive `h1` and unique metadata.
+2. Add a self-referencing canonical URL.
+3. Add the route to `scripts/export-pages.mjs` and its sitemap entries.
+4. Link to it from an existing relevant page.
+5. Run `npm test` before publishing.
+
+For stronger long-term organic search growth, publish original article pages on
+this domain and use external Medium or LinkedIn copies as distribution links.
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`
@@ -95,7 +113,7 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
-- `npm test`: build and verify both public pages
+- `npm test`: export and verify content, metadata, structured data and crawl files
 - `npm run lint`: run source quality checks
 - `npm run export:pages`: create the deployable static site
 

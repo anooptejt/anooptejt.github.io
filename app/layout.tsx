@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { siteName, siteUrl } from "./seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,10 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anooptejt.github.io"),
-  title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "DevOps, Platform Engineering & AIOps Architect | Anoop Tej",
+    template: "%s | Anoop Tej",
+  },
   description:
-    "DevOps, platform engineering and AIOps architecture portfolio featuring Engineering Front Door solutions, GitOps projects, technical writing and conference talks.",
+    "Independent DevOps, platform engineering and AIOps architect helping global teams build secure delivery platforms, GitOps and AI assisted operations.",
   keywords: [
     "DevOps Architect",
     "Platform Engineering",
@@ -28,11 +32,29 @@ export const metadata: Metadata = {
     "DevOps Speaker",
     "Technical Writing",
   ],
-  authors: [{ name: "Anoop Tej Thotapalli" }],
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  category: "technology",
+  referrer: "origin-when-cross-origin",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
-    title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
-    description: "Engineering systems, designed with intent.",
+    locale: "en_IN",
+    siteName,
+    title: "DevOps, Platform Engineering & AIOps Architect | Anoop Tej",
+    description:
+      "Independent architecture consulting for secure delivery platforms, GitOps and AI assisted operations.",
     images: [
       {
         url: "/og.png",
@@ -44,12 +66,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anoop Tej Thotapalli | Independent DevOps & AIOps Architect",
-    description: "Engineering systems, designed with intent.",
+    title: "DevOps, Platform Engineering & AIOps Architect | Anoop Tej",
+    description:
+      "Independent architecture consulting for secure delivery platforms, GitOps and AI assisted operations.",
     images: ["/og.png"],
   },
   icons: {
-    icon: "/og.png",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
   },
 };
 

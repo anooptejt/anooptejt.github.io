@@ -1,7 +1,67 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { JsonLd } from "./components/JsonLd";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { professionalProfiles, publications } from "./content";
-import Link from "next/link";
+import {
+  personStructuredData,
+  siteName,
+  siteUrl,
+  websiteStructuredData,
+} from "./seo";
+
+const homeTitle = "DevOps, Platform Engineering & AIOps Architect | Anoop Tej";
+const homeDescription =
+  "Independent DevOps, platform engineering and AIOps architect helping global teams build secure delivery platforms, GitOps and AI assisted operations.";
+
+export const metadata: Metadata = {
+  title: { absolute: homeTitle },
+  description: homeDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+    type: "website",
+    title: homeTitle,
+    description: homeDescription,
+    siteName,
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Anoop Tej Thotapalli, DevOps, Platform Engineering and AIOps Architect",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: homeDescription,
+    images: ["/og.png"],
+  },
+};
+
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    websiteStructuredData,
+    personStructuredData,
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profile-page`,
+      url: `${siteUrl}/`,
+      name: homeTitle,
+      description: homeDescription,
+      dateModified: "2026-08-25",
+      inLanguage: "en",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#person` },
+    },
+  ],
+};
 
 const capabilities = [
   {
@@ -246,6 +306,7 @@ export default function Home() {
 
   return (
     <main>
+      <JsonLd data={homeStructuredData} />
       <a className="skip-link" href="#content">
         Skip to content
       </a>
@@ -257,10 +318,10 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="status-dot" />
-            DevOps · Platform Engineering · AIOps
+            Independent DevOps · Platform Engineering · AIOps Architect
           </p>
           <h1>
-            Engineering systems,
+            DevOps and AIOps platforms,
             <br />
             <em>designed with intent.</em>
           </h1>
@@ -298,9 +359,10 @@ export default function Home() {
             <div className="portrait-frame">
               <img
                 src="/anoop-portrait.jpg"
-                alt="Anoop Tej Thotapalli"
+                alt="Portrait of Anoop Tej Thotapalli, DevOps and AIOps architect"
                 width="960"
                 height="1200"
+                fetchPriority="high"
               />
               <span className="portrait-accent" aria-hidden="true" />
             </div>

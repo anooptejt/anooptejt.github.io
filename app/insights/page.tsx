@@ -1,17 +1,108 @@
 import type { Metadata } from "next";
+import { JsonLd } from "../components/JsonLd";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import { appearances, fieldNotes, publications } from "../content";
+import { personStructuredData, siteName, siteUrl, websiteStructuredData } from "../seo";
+
+const insightsTitle = "DevOps, Platform Engineering & AIOps Insights | Anoop Tej";
+const insightsDescription =
+  "Articles, field notes and technical talks on DevOps, platform engineering, AIOps, GitOps, responsible AI and engineering leadership.";
 
 export const metadata: Metadata = {
-  title: "Writing & Talks | Anoop Tej Thotapalli",
-  description:
-    "Articles, field notes and technical talks on DevOps, platform engineering, AIOps, responsible AI and technology leadership.",
+  title: { absolute: insightsTitle },
+  description: insightsDescription,
+  alternates: {
+    canonical: "/insights/",
+  },
+  openGraph: {
+    url: "/insights/",
+    type: "website",
+    title: insightsTitle,
+    description: insightsDescription,
+    siteName,
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "DevOps, Platform Engineering and AIOps writing by Anoop Tej Thotapalli",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: insightsTitle,
+    description: insightsDescription,
+    images: ["/og.png"],
+  },
+};
+
+const insightsItems = [
+  ...publications.map((publication) => ({
+    name: publication.title,
+    url: publication.links[0].href,
+  })),
+  ...fieldNotes.map((note) => ({ name: note.title, url: note.href })),
+  ...appearances.map((appearance) => ({
+    name: appearance.title,
+    url: appearance.href,
+  })),
+];
+
+const insightsStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    websiteStructuredData,
+    personStructuredData,
+    {
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/insights/#collection-page`,
+      url: `${siteUrl}/insights/`,
+      name: insightsTitle,
+      description: insightsDescription,
+      inLanguage: "en",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      author: { "@id": `${siteUrl}/#person` },
+      mainEntity: { "@id": `${siteUrl}/insights/#item-list` },
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/insights/#item-list`,
+      name: "Anoop Tej Thotapalli writing and talks",
+      numberOfItems: insightsItems.length,
+      itemListElement: insightsItems.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: item.url,
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/insights/#breadcrumbs`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Writing and Talks",
+          item: `${siteUrl}/insights/`,
+        },
+      ],
+    },
+  ],
 };
 
 export default function InsightsPage() {
   return (
     <main>
+      <JsonLd data={insightsStructuredData} />
       <a className="skip-link" href="#content">
         Skip to content
       </a>
@@ -20,7 +111,7 @@ export default function InsightsPage() {
       <section className="archive-hero" id="top">
         <div id="content">
           <p className="eyebrow">Writing &amp; talks</p>
-          <h1>Ideas for building systems that teams can operate.</h1>
+          <h1>DevOps, platform engineering and AIOps insights.</h1>
           <p>
             A complete archive of long-form articles, concise field notes and
             technical sessions grounded in real engineering work.
