@@ -85,7 +85,12 @@ test("server-renders the complete writing and talks archive", async () => {
   );
   assert.match(html, /How to Integrate AWS with Spinnaker/);
   assert.match(html, /Old-School Log Analysis Challenge/);
+  assert.match(html, /Civo Navigate India 2025/);
+  assert.match(html, /CLOUDxAI 2026/);
+  assert.match(html, /Human-in-the-Loop vs Human-on-the-Loop/);
   assert.match(html, /Deploy Spinnaker CD Pipelines in Kubernetes/);
+  assert.match(html, /Spinnaker: A Cloud-Native CD Platform/);
+  assert.match(html, /https:\/\/www\.youtube\.com\/watch\?v=-eMVHY-iAUo/);
   assert.match(html, /Hire me on Fiverr/);
   assert.match(html, /https:\/\/www\.fiverr\.com\/anooptejt/);
   assert.match(

@@ -39,8 +39,10 @@ test("exports unique Insights metadata and collection structured data", async ()
   assert.ok(documents[0]["@graph"].some((item) => item["@type"] === "CollectionPage"));
   const itemList = documents[0]["@graph"].find((item) => item["@type"] === "ItemList");
   assert.ok(itemList);
-  assert.equal(itemList.numberOfItems, 20);
+  assert.equal(itemList.numberOfItems, 28);
   assert.match(JSON.stringify(itemList), /The Phone Is Not Just Taking Our Time/);
+  assert.match(JSON.stringify(itemList), /Civo Navigate India 2025/);
+  assert.match(JSON.stringify(itemList), /CLOUDxAI 2026/);
   assert.ok(documents[0]["@graph"].some((item) => item["@type"] === "BreadcrumbList"));
   assert.doesNotMatch(html, /—|–/);
 });

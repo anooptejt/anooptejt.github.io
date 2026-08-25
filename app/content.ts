@@ -145,6 +145,41 @@ export const publications: Publication[] = [
 
 export const fieldNotes = [
   {
+    title: "Civo Navigate India 2025: Real AI, Real Conversations, Real Learning",
+    topic: "Event reflections",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7396993351910248448/",
+  },
+  {
+    title: "CLOUDxAI 2026: LLMOps, Multi-Agent Systems and Self-Healing Infrastructure",
+    topic: "Event preview",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7434647520221466624/",
+  },
+  {
+    title: "From Incident Response to Prevention",
+    topic: "DevOps reliability",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7444700581300125696/",
+  },
+  {
+    title: "Human-in-the-Loop vs Human-on-the-Loop",
+    topic: "AI governance",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7431948995750559745/",
+  },
+  {
+    title: "AI in DevOps: From Pager to Resolution",
+    topic: "Agentic operations",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7429578539852607488/",
+  },
+  {
+    title: "When Understanding Becomes Action: The Rise of AI Agents",
+    topic: "AI agents",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7424475259296272384/",
+  },
+  {
+    title: "AI in DevOps: From Alerts to Answers",
+    topic: "AIOps",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7417995487502589952/",
+  },
+  {
     title: "Old-School Log Analysis Challenge",
     topic: "Troubleshooting",
     href: "https://www.linkedin.com/posts/anooptej-thotapalli-a3754b77_devops-sre-troubleshooting-activity-7483860873472598016-PzKj",
@@ -186,6 +221,14 @@ export const appearances = [
     title: "OSCONF 2021: Anooptej Thotapalli",
     text: "A short introduction to the conference session and its focus.",
     href: "https://www.youtube.com/watch?v=5PZspd6eI-o",
+    action: "Watch on YouTube",
+  },
+  {
+    type: "Meetup session",
+    year: "2019",
+    title: "Spinnaker: A Cloud-Native CD Platform",
+    text: "CNCF Bengaluru Meetup session with Anoop Tej and Jaya on Spinnaker as a cloud-native continuous-delivery platform.",
+    href: "https://www.youtube.com/watch?v=-eMVHY-iAUo",
     action: "Watch on YouTube",
   },
   {
