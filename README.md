@@ -1,14 +1,21 @@
-# vinext-starter
+# Anoop Tej Thotapalli Portfolio
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+A public portfolio for DevOps, platform engineering, AIOps and independent
+consulting. The site is built with React and Vinext, then published to GitHub
+Pages.
+
+## Publishing new content
+
+Articles, field notes, talks and professional profile links live in
+`app/content.ts`. Add a new article to `publications` with a sortable
+`publishedAt` value. Set `featured: true` on the three entries you want on the
+homepage. The `/insights/` page displays the complete archive in date order.
 
 ## Prerequisites
 
 - Node.js `>=22.13.0`
 
-## Quick Start
+## Quick start
 
 ```bash
 npm install
@@ -18,14 +25,13 @@ npm run build
 
 This starter does not use `wrangler.jsonc`.
 
-## Included Shape
+## Site structure
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+- `app/page.tsx`: portfolio homepage
+- `app/insights/page.tsx`: complete writing and talks archive
+- `app/content.ts`: shared publishing content
+- `app/globals.css`: visual system and responsive layouts
+- `scripts/export-pages.mjs`: static export for GitHub Pages
 
 ## Workspace Auth Headers
 
@@ -85,12 +91,13 @@ or enforce explicit server-side membership or allowlist checks.
 Use SIWC for account pages, user-specific dashboards, saved records, and write
 actions tied to the current ChatGPT user. Leave public content anonymous.
 
-## Useful Commands
+## Useful commands
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+- `npm test`: build and verify both public pages
+- `npm run lint`: run source quality checks
+- `npm run export:pages`: create the deployable static site
 
 ## Learn More
 

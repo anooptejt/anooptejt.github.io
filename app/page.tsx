@@ -1,3 +1,8 @@
+import { SiteFooter } from "./components/SiteFooter";
+import { SiteHeader } from "./components/SiteHeader";
+import { professionalProfiles, publications } from "./content";
+import Link from "next/link";
+
 const capabilities = [
   {
     number: "01",
@@ -235,219 +240,6 @@ const principles = [
   "Measure outcomes, adoption and developer experience.",
 ];
 
-const publications = [
-  {
-    topic: "Responsible AI",
-    date: "July 2026",
-    title: "Your AI Chat Is Private Until the Moment You Share It",
-    text: "A practical look at how shared AI conversations become public pages, and how teams can exchange useful knowledge without exposing raw chat history.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://anoopt0106.medium.com/your-ai-chat-is-private-until-the-moment-you-share-it-7dec1a8c81da",
-      },
-      {
-        label: "Read on LinkedIn",
-        href: "https://www.linkedin.com/pulse/your-ai-chat-private-until-moment-you-share-anooptej-thotapalli-dyjhc",
-      },
-    ],
-  },
-  {
-    topic: "DevOps practice",
-    date: "July 2026",
-    title: "DevOps Is Not Just Tools: Learning the Tool vs Practising the Job",
-    text: "Why certifications open the door, while architecture thinking, ownership, release judgement and recovery planning build real capability.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://medium.com/towards-artificial-intelligence/devops-is-not-just-tools-learning-the-tool-vs-practising-the-job-4f7fa252b883",
-      },
-      {
-        label: "Read on LinkedIn",
-        href: "https://www.linkedin.com/pulse/devops-just-tools-learning-tool-vs-practising-job-anooptej-thotapalli-jmljc",
-      },
-    ],
-  },
-  {
-    topic: "Education",
-    date: "June 2026",
-    title: "Are We Feeding Our Children Intellectual Junk Food, And Calling It Progress?",
-    text: "A reflection on micro-learning, deep education and the quiet erosion of our capacity to think difficult things through.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://anoopt0106.medium.com/are-we-feeding-our-children-intellectual-junk-food-and-calling-it-progress-28398ef7f7cb",
-      },
-    ],
-  },
-  {
-    topic: "Education",
-    date: "June 2026",
-    title: "Why I Chose IB for My Kids Even Though I Grew Up in the Indian Curriculum System",
-    text: "A personal perspective on choosing an education model around curiosity, application and learning how to think.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://anoopt0106.medium.com/why-i-chose-ib-for-my-kids-even-though-i-grew-up-in-the-indian-curriculum-system-3f02d57c8c37",
-      },
-      {
-        label: "Read on LinkedIn",
-        href: "https://www.linkedin.com/pulse/why-i-chose-ib-my-kids-even-though-grew-up-indian-anooptej-thotapalli-xmpac",
-      },
-    ],
-  },
-  {
-    topic: "Agentic operations",
-    date: "April 2026",
-    title: "When AI Stopped Watching and Started Acting",
-    text: "How DevOps is moving from reactive observation toward predictive, context-aware and carefully governed action.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://medium.com/towards-agentic-ai/when-ai-stopped-watching-and-started-acting-c6aa1d646683",
-      },
-    ],
-  },
-  {
-    topic: "AIOps",
-    date: "January 2026",
-    title: "From Red Alerts to Green Lights: A DevOps Engineer’s Journey with AI",
-    text: "A practitioner’s journey from late-night incident response toward systems that diagnose, recommend and recover with human oversight.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://medium.com/towards-agentic-ai/from-red-alerts-to-green-lights-a-devops-engineers-journey-with-ai-8dd51ac9d997",
-      },
-    ],
-  },
-  {
-    topic: "Spinnaker",
-    date: "February 2021",
-    title: "Integrate AWS ECS with Spinnaker",
-    text: "A technical guide to connecting an AWS ECS delivery target with a Spinnaker deployment workflow.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://anoopt0106.medium.com/integrate-aws-ecs-with-spinnaker-99b53e5da9d6",
-      },
-    ],
-  },
-  {
-    topic: "Spinnaker",
-    date: "February 2021",
-    title: "How to Integrate AWS with Spinnaker",
-    text: "A foundational walkthrough for configuring AWS services as part of a Spinnaker continuous-delivery environment.",
-    links: [
-      {
-        label: "Read on Medium",
-        href: "https://anoopt0106.medium.com/how-to-integrate-aws-with-spinnaker-8a5c9652dc8f",
-      },
-    ],
-  },
-];
-
-const fieldNotes = [
-  {
-    title: "Old-School Log Analysis Challenge",
-    topic: "Troubleshooting",
-    href: "https://www.linkedin.com/posts/anooptej-thotapalli-a3754b77_devops-sre-troubleshooting-activity-7483860873472598016-PzKj",
-  },
-  {
-    title: "AI Finds Vulnerabilities, But Who Governs the Fix?",
-    topic: "AI governance",
-    href: "https://www.linkedin.com/posts/anooptej-thotapalli-a3754b77_agenticai-cybersecurity-devsecops-activity-7483425681456906240-6eAC",
-  },
-  {
-    title: "Micro-Learning vs Foundational Education in the Future of Work",
-    topic: "Learning",
-    href: "https://www.linkedin.com/posts/anooptej-thotapalli-a3754b77_continuouslearning-techleadership-futureofwork-activity-7470167960192512000-RX4R",
-  },
-  {
-    title: "The Hidden Complexity of Platform Simplicity",
-    topic: "Platform engineering",
-    href: "https://www.linkedin.com/posts/anooptej-thotapalli-a3754b77_devops-platformengineering-gitops-activity-7465043580512780289-0AWh",
-  },
-  {
-    title: "TOON: A Game-Changer for LLMs and Multi-Agent Systems",
-    topic: "AI engineering",
-    href: "https://www.linkedin.com/posts/anooptej-thotapalli-a3754b77_aiengineering-multiagentsystems-promptoptimization-activity-7394781288957698048-XVxx",
-  },
-];
-
-const appearances = [
-  {
-    type: "Conference session",
-    year: "2021",
-    title: "Deploy Spinnaker CD Pipelines in Kubernetes",
-    text: "OSCONF session within a full-day cloud-native engineering conference.",
-    href: "https://www.youtube.com/watch?v=gbJvMcVgPkg",
-    action: "Watch full conference",
-  },
-  {
-    type: "Speaker introduction",
-    year: "2021",
-    title: "OSCONF 2021: Anooptej Thotapalli",
-    text: "A short introduction to the conference session and its focus.",
-    href: "https://www.youtube.com/watch?v=5PZspd6eI-o",
-    action: "Watch on YouTube",
-  },
-  {
-    type: "Webinar",
-    year: "Archive",
-    title: "Integrating Jenkins and Spinnaker to Gain the Best of Both Worlds",
-    text: "Connecting established CI workflows with progressive continuous delivery.",
-    href: "https://www.opsmx.com/webinars/integrating-jenkins-and-spinnaker-to-gain-the-best-of-both-worlds/",
-    action: "View webinar",
-  },
-  {
-    type: "Webinar",
-    year: "Archive",
-    title: "Blue-Green Deployments into AWS EKS Using Spinnaker",
-    text: "Designing safer Kubernetes releases with controlled traffic transition.",
-    href: "https://www.opsmx.com/webinars/simplifying-deployments-with-a-blue-green-strategy-on-spinnaker/",
-    action: "View webinar",
-  },
-  {
-    type: "Webinar",
-    year: "Archive",
-    title: "ArgoCD for Continuous Delivery: A Migration Blueprint",
-    text: "A practical migration approach for moving application delivery toward GitOps.",
-    href: "https://www.opsmx.com/webinars/argocd-for-continuous-delivery-a-migration-blueprint/",
-    action: "View webinar",
-  },
-  {
-    type: "Webinar",
-    year: "2019",
-    title: "Integrating Terraform with OSS Spinnaker for Application Deployments",
-    text: "Using infrastructure provisioning as a governed stage within a delivery pipeline.",
-    href: "https://go.opsmx.com/how-to-integrate-terraform-with-oss-spinnaker-for-app-deployments-december-2019",
-    action: "View webinar",
-  },
-];
-
-const professionalProfiles = [
-  {
-    label: "LinkedIn",
-    value: "Articles, field notes and professional updates",
-    href: "https://www.linkedin.com/in/anooptej-t-a3754b77",
-  },
-  {
-    label: "Medium",
-    value: "Long-form writing on engineering, AI and learning",
-    href: "https://anoopt0106.medium.com/",
-  },
-  {
-    label: "GitHub",
-    value: "Public code and portfolio source",
-    href: "https://github.com/anooptejt",
-  },
-  {
-    label: "PaperCall",
-    value: "Conference speaker profile",
-    href: "https://www.papercall.io/speakers/73756",
-  },
-];
-
 export default function Home() {
   const featuredProjects = projects.filter((project) => project.featured);
   const additionalProjects = projects.filter((project) => !project.featured);
@@ -458,34 +250,7 @@ export default function Home() {
         Skip to content
       </a>
 
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Anoop Tej Thotapalli, home">
-          <span className="brand-mark">AT</span>
-          <span className="brand-name">
-            Anoop Tej
-            <small>Independent DevOps & AIOps Architect</small>
-          </span>
-        </a>
-        <nav className="nav-links" aria-label="Primary navigation">
-          <a href="#expertise">Expertise</a>
-          <a href="#work">Selected work</a>
-          <a href="#approach">Approach</a>
-          <a href="#insights">Insights</a>
-          <a
-            href="https://www.linkedin.com/in/anooptej-t-a3754b77"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            className="nav-cta"
-            href="mailto:anooptejthotapalli@gmail.com?subject=Freelance%20Architecture%20Enquiry"
-          >
-            Start a conversation
-          </a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <div className="hero-glow" aria-hidden="true" />
@@ -847,112 +612,122 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="insights-section" id="insights">
-          <div className="insights-intro">
-            <div>
-              <p className="eyebrow">Insights & speaking</p>
-              <h2>Ideas tested in real engineering environments.</h2>
+        <section className="publishing-section" id="insights">
+          <div className="publishing-shell">
+            <div className="publishing-intro">
+              <div>
+                <p className="eyebrow">Writing &amp; talks</p>
+                <h2>Ideas that move from architecture to action.</h2>
+              </div>
+              <div className="publishing-summary">
+                <p>
+                  Practical perspectives on DevOps, platform engineering, AIOps,
+                  responsible AI and the human side of technology.
+                </p>
+                <dl className="content-counts" aria-label="Published content totals">
+                  <div>
+                    <dt>{String(publications.length).padStart(2, "0")}</dt>
+                    <dd>Articles</dd>
+                  </div>
+                  <div>
+                    <dt>05</dt>
+                    <dd>Field notes</dd>
+                  </div>
+                  <div>
+                    <dt>06</dt>
+                    <dd>Talks</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
-            <p>
-              Long-form writing, practical field notes and technical sessions
-              covering DevOps, platform engineering, AIOps, responsible AI and
-              the human side of technology.
-            </p>
-          </div>
 
-          <div className="publication-grid">
-            {publications.map((publication, index) => (
-              <article className="publication-card" key={publication.title}>
-                <div className="publication-meta">
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <span>{publication.topic}</span>
-                  <time>{publication.date}</time>
-                </div>
-                <h3>{publication.title}</h3>
-                <p>{publication.text}</p>
-                <div className="publication-links">
-                  {publication.links.map((link) => (
-                    <a
-                      href={link.href}
-                      key={link.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {link.label} <span aria-hidden="true">↗</span>
-                    </a>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="insight-columns">
-            <section className="field-notes" aria-labelledby="field-notes-title">
-              <div className="subsection-heading">
-                <p className="eyebrow">LinkedIn field notes</p>
-                <h3 id="field-notes-title">Short observations from the work.</h3>
-              </div>
-              <ol>
-                {fieldNotes.map((note, index) => (
-                  <li key={note.href}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <a href={note.href} target="_blank" rel="noreferrer">
-                      <small>{note.topic}</small>
-                      <strong>{note.title}</strong>
-                    </a>
-                    <span aria-hidden="true">↗</span>
-                  </li>
-                ))}
-              </ol>
-            </section>
-
-            <section className="appearances" aria-labelledby="appearances-title">
-              <div className="subsection-heading">
-                <p className="eyebrow">Talks & webinars</p>
-                <h3 id="appearances-title">Sharing the architecture behind delivery.</h3>
-              </div>
-              <div className="appearance-list">
-                {appearances.map((appearance) => (
-                  <article key={appearance.href}>
-                    <div>
-                      <span>{appearance.type}</span>
-                      <time>{appearance.year}</time>
+            <div className="publishing-layout">
+              <div className="latest-publications">
+                {publications
+                  .filter((publication) => publication.featured)
+                  .slice(0, 3)
+                  .map((publication, index) => (
+                  <article className="publication-row" key={publication.title}>
+                    <div className="publication-row-index">
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <time>{publication.date}</time>
                     </div>
-                    <h4>{appearance.title}</h4>
-                    <p>{appearance.text}</p>
-                    <a
-                      href={appearance.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {appearance.action} <span aria-hidden="true">↗</span>
-                    </a>
+                    <div className="publication-row-main">
+                      <p>{publication.topic}</p>
+                      <h3>{publication.title}</h3>
+                      <span>{publication.text}</span>
+                      <div className="publication-links">
+                        {publication.links.map((link) => (
+                          <a
+                            href={link.href}
+                            key={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {link.label} <span aria-hidden="true">↗</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </article>
+                  ))}
+                <Link className="archive-link" href="/insights/">
+                  Browse all writing, field notes &amp; talks
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+
+              <aside className="consulting-rail" aria-labelledby="consulting-rail-title">
+                <p className="eyebrow">Need hands-on support?</p>
+                <h3 id="consulting-rail-title">
+                  Turn an engineering challenge into an operable platform.
+                </h3>
+                <p>
+                  DevOps, platform engineering, AIOps and multi-cloud consulting
+                  backed by 17+ years of delivery experience.
+                </p>
+                <div className="consulting-actions">
+                  <a
+                    className="fiverr-button"
+                    href="https://www.fiverr.com/anooptejt"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Hire me on Fiverr <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="#work">
+                    See selected work <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+                <ul className="consulting-capabilities">
+                  <li>Architecture reviews</li>
+                  <li>Implementation roadmaps</li>
+                  <li>AI assisted operations</li>
+                </ul>
+              </aside>
+            </div>
+
+            <section className="professional-presence" aria-labelledby="presence-title">
+              <div>
+                <p className="eyebrow">Elsewhere</p>
+                <h3 id="presence-title">Professional presence across the web.</h3>
+              </div>
+              <div className="profile-links">
+                {professionalProfiles.map((profile) => (
+                  <a
+                    href={profile.href}
+                    key={profile.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <strong>{profile.label}</strong>
+                    <span>{profile.value}</span>
+                    <small aria-hidden="true">↗</small>
+                  </a>
                 ))}
               </div>
             </section>
           </div>
-
-          <section className="professional-presence" aria-labelledby="presence-title">
-            <div>
-              <p className="eyebrow">Elsewhere</p>
-              <h3 id="presence-title">Professional presence across the web.</h3>
-            </div>
-            <div className="profile-links">
-              {professionalProfiles.map((profile) => (
-                <a
-                  href={profile.href}
-                  key={profile.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <strong>{profile.label}</strong>
-                  <span>{profile.value}</span>
-                  <small aria-hidden="true">↗</small>
-                </a>
-              ))}
-            </div>
-          </section>
         </section>
 
         <section className="contact-section" id="contact">
@@ -990,29 +765,7 @@ export default function Home() {
         </section>
       </div>
 
-      <footer>
-        <div className="footer-brand">
-          <span className="brand-mark">AT</span>
-          <p>
-            <strong>Anoop Tej Thotapalli</strong>
-            Independent DevOps · Platform Engineering · AIOps
-          </p>
-        </div>
-        <p className="footer-note">
-          Independent architecture consulting for engineering platforms,
-          delivery transformation and intelligent operations. Bengaluru, India.
-        </p>
-        <div className="footer-links">
-          <a
-            href="https://www.linkedin.com/in/anooptej-t-a3754b77"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn ↗
-          </a>
-          <a href="#top">Back to top ↑</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
