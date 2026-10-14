@@ -7,7 +7,7 @@ import { profile } from "@/lib/profile"
 
 export const metadata: Metadata = {
   title: "About",
-  description: "askanooptejthotapalli is a career desk for adults. Wonderabouts remains the place for children.",
+  description: "Career guidance, interview preparation, open source, and practical engineering guides from Anoop Tej Thotapalli.",
 }
 
 export default function AboutPage() {
@@ -32,10 +32,7 @@ export default function AboutPage() {
           I am Anoop Tej Thotapalli, a father and an engineer. I have spent more than 17 years on delivery, cloud-native platforms, and the judgment around AI in that work.
         </p>
         <p>
-          askanooptejthotapalli is the adult desk. Come here for career guidance, interviews, open source, and the documents on DevOps, CI/CD, Kubernetes, Docker, OpenShift, Argo CD, Spinnaker, GitHub Actions, and AI in delivery.
-        </p>
-        <p>
-          Wonderabouts is a different place, for children and the grown-ups reading with them. This desk does not use that voice.
+          Come here for career guidance, interviews, open source, and the documents on DevOps, CI/CD, Kubernetes, Docker, OpenShift, Argo CD, Spinnaker, GitHub Actions, and AI in delivery.
         </p>
         <p>
           The pages are a starting point. When you need something they do not cover, use Ask me to find related guides or send your question for a personal reply. LinkedIn is also available. I would rather receive a specific question than guess which topic to write next.
