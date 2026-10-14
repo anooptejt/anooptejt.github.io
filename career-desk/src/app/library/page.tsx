@@ -5,17 +5,21 @@ import { libraryGuides } from "@/content/library"
 
 export const metadata: Metadata = {
   title: "Library",
-  description: "Practical guides to DevOps, AI, CI/CD, Kubernetes, Docker, OpenShift, Argo CD, Spinnaker, and GitHub Actions.",
+  description: "Writing and resources from Anoop Tej Thotapalli.",
 }
 
 export default function LibraryPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12">
       <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Library</p>
-      <h1 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Documents for people who have to operate the system.</h1>
-      <p className="mt-4 text-lg leading-8 text-muted-foreground">
-        Each note says what to learn, which decision matters, how to practice, and what an interviewer is listening for. They are starting points, not certifications.
-      </p>
+      <h1 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Library</h1>
+      {libraryGuides.length === 0 && (
+        <div className="mt-8 rounded-2xl border border-border bg-card p-6">
+          <h2 className="font-serif text-2xl">No articles published yet.</h2>
+          <p className="mt-3 text-muted-foreground">New writing from Anoop will appear here.</p>
+          <Link href="/ask" className="mt-5 inline-block text-sm underline underline-offset-4">Have a question? Ask Anoop</Link>
+        </div>
+      )}
       <ul className="mt-10 space-y-4">
         {libraryGuides.map((guide) => (
           <li key={guide.slug}>

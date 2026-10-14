@@ -6,7 +6,9 @@ const root = resolve("out")
 const base = "/askanooptejthotapalli"
 const files = await readdir(root, { recursive: true })
 const pages = files.filter((file) => file.endsWith(".html"))
-assert(pages.length >= 23, "All guides and index pages must be exported")
+for (const page of ["index.html", "about/index.html", "ask/index.html", "career/index.html", "library/index.html", "interview/index.html", "open-source/index.html"]) {
+  assert(pages.includes(page), `Missing section page: ${page}`)
+}
 assert(!files.some((file) => file.startsWith("api/")), "No server API should ship to Pages")
 await stat(join(root, ".nojekyll"))
 let checked = 0

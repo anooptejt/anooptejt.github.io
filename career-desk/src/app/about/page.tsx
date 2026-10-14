@@ -35,7 +35,7 @@ export default function AboutPage() {
           This is a place for anything on your mind: life, work, learning, relationships, technology, or an idea you want to explore. Bring your question. I will share what I know, help you think it through, or point you toward a useful next step.
         </p>
         <p>
-          The current guides focus on careers and technology. They are one part of this space, and your question does not need to fit those topics. Use Ask me to send it for a personal reply. LinkedIn is also available.
+          I will be adding my own writing here. Your question does not need to fit a topic or wait for an article. Use Ask me to send it for a personal reply. LinkedIn is also available.
         </p>
       </div>
       <div className="mt-8 flex flex-wrap gap-3">

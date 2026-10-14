@@ -3,7 +3,6 @@ import Link from "next/link"
 import { ProfileLinks } from "@/components/profile-links"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { libraryGuides } from "@/content/library"
 import { profile } from "@/lib/profile"
 
 const doors = [
@@ -11,13 +10,13 @@ const doors = [
     href: "/career",
     index: "01",
     title: "Career guidance",
-    text: "How to make finished work visible, choose a next role, and keep AI inside a decision you can defend.",
+    text: "No articles published yet. New writing will appear here.",
   },
   {
     href: "/library",
     index: "02",
-    title: "The tools, with judgment",
-    text: "DevOps, AI, CI/CD, Kubernetes, Docker, OpenShift, Argo CD, Spinnaker, and GitHub Actions.",
+    title: "Library",
+    text: "No articles published yet. New writing will appear here.",
   },
   {
     href: "/open-source",
@@ -29,7 +28,7 @@ const doors = [
     href: "/interview",
     index: "04",
     title: "Interview practice",
-    text: "The YAML question, the tool you have not used, and a one-week plan.",
+    text: "No articles published yet. New writing will appear here.",
   },
 ]
 
@@ -64,7 +63,7 @@ export default function HomePage() {
               Ask me a question
             </Button>
             <Button nativeButton={false} render={<Link href="/library" />} variant="outline" size="lg">
-              Explore the guides
+              Visit the library
             </Button>
           </div>
         </div>
@@ -82,8 +81,8 @@ export default function HomePage() {
 
       <section className="mx-auto grid max-w-5xl gap-4 px-4 pb-8 sm:grid-cols-2" aria-labelledby="current-guides">
         <div className="sm:col-span-2">
-          <h2 id="current-guides" className="font-serif text-3xl">Explore the current guides</h2>
-          <p className="mt-2 text-muted-foreground">The library starts with careers and technology. Your questions can go anywhere.</p>
+          <h2 id="current-guides" className="font-serif text-3xl">Explore the sections</h2>
+          <p className="mt-2 text-muted-foreground">New writing will appear here as I add it. Your questions can go anywhere.</p>
         </div>
         {doors.map((door) => (
           <Link key={door.href} href={door.href} className="rounded-2xl bg-card p-5 ring-1 ring-foreground/10 transition hover:bg-accent">
@@ -94,19 +93,7 @@ export default function HomePage() {
         ))}
       </section>
 
-      <section className="mx-auto max-w-5xl px-4 py-12">
-        <h2 className="font-serif text-3xl">From the technology library</h2>
-        <ul className="mt-6 divide-y divide-border rounded-2xl bg-card ring-1 ring-foreground/10">
-          {libraryGuides.map((guide) => (
-            <li key={guide.slug}>
-              <Link href={`/library/${guide.slug}`} className="flex flex-col gap-1 px-5 py-4 hover:bg-muted/60 sm:flex-row sm:items-baseline sm:justify-between">
-                <span className="font-medium">{guide.title}</span>
-                <span className="text-sm text-muted-foreground sm:max-w-md sm:text-right">{guide.takeaway}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+
     </div>
   )
 }

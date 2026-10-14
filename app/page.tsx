@@ -678,7 +678,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Ask about anything</p>
             <h2 id="career-desk-heading">Ask Anoop Tej</h2>
-            <p>Life, work, learning, technology, or anything else on your mind. Explore the guides or send Anoop a question for a personal reply.</p>
+            <p>Life, work, learning, technology, or anything else on your mind. Send Anoop a question for a personal reply.</p>
           </div>
           <a className="archive-link" href="/askanooptejthotapalli/">Ask Anoop a question ↗</a>
         </section>

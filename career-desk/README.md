@@ -6,13 +6,13 @@ Public URL: https://anooptejt.github.io/askanooptejthotapalli/
 
 ## What is here
 
-- Career notes on visibility, choosing a role, and keeping AI decisions human
-- Guides for DevOps, AI, CI/CD, Kubernetes, Docker, OpenShift, Argo CD, Spinnaker, and GitHub Actions
+- Career, Library, and Interview sections ready for Anoop’s original articles
 - Open source projects with a realistic first contribution
-- Interview practice and a one-week preparation plan
-- An Ask me page that matches questions to guides and sends questions through n8n to Telegram, with personal replies shown in the browser
+- An Ask me page that sends questions through n8n to Telegram, with personal replies shown in the browser
 
-The guides are static. Messaging uses a separate, temporary HTTPS gateway connected to the local n8n Human Relay. Questions and replies are stored in the relay and the visitor’s browser. LinkedIn remains available when messaging is offline. See [gateway operation and limits](gateway/README.md).
+No articles are currently published in Career, Library, or Interview. The placeholder articles, their individual routes, homepage previews, and matching rules have been removed. Add original content and its article routes when ready to publish.
+
+The website is static. Messaging uses a separate, temporary HTTPS gateway connected to the local n8n Human Relay. Questions and replies are stored in the relay and the visitor’s browser. LinkedIn remains available when messaging is offline. See [gateway operation and limits](gateway/README.md).
 
 ## Run locally
 
