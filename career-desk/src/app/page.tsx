@@ -72,7 +72,7 @@ export default function HomePage() {
           <p className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">If the library stops</p>
           <p className="mt-3 font-serif text-3xl leading-tight">Send me the missing topic.</p>
           <p className="mt-3 text-sm leading-6 text-primary-foreground/85">
-            Find a guide for your question. If you need more, copy your question and contact me on LinkedIn.
+            Find a guide for your question, or send it to me for a personal reply here.
           </p>
           <Button nativeButton={false} render={<Link href="/ask" />} variant="secondary" className="mt-6" size="lg">
             Open the ask desk

@@ -38,7 +38,7 @@ export default function AboutPage() {
           Wonderabouts is a different place, for children and the grown-ups reading with them. This desk does not use that voice.
         </p>
         <p>
-          The pages are a starting point. When you need something they do not cover, use Ask me to find related guides and prepare your question. Then contact me on LinkedIn. I would rather receive a specific question than guess which topic to write next.
+          The pages are a starting point. When you need something they do not cover, use Ask me to find related guides or send your question for a personal reply. LinkedIn is also available. I would rather receive a specific question than guess which topic to write next.
         </p>
       </div>
       <div className="mt-8 flex flex-wrap gap-3">

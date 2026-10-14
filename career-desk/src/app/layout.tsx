@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s · Ask Anoop Tej",
   },
   description:
-    "Career guidance for adults in DevOps, platform engineering, CI/CD, Kubernetes, and AI-assisted delivery. Explore the guides and contact Anoop on LinkedIn.",
+    "Career guidance for adults in DevOps, platform engineering, CI/CD, Kubernetes, and AI-assisted delivery. Explore the guides and ask Anoop for a personal reply.",
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

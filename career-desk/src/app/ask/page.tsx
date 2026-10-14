@@ -5,7 +5,7 @@ import { profile } from "@/lib/profile"
 
 export const metadata: Metadata = {
   title: "Ask me",
-  description: "Find career guides for your question, then contact Anoop Tej on LinkedIn.",
+  description: "Find career guides and send a question to Anoop Tej for a personal reply.",
 }
 
 export default function AskPage() {

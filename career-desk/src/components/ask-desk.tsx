@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { matchQuestion } from "@/lib/catalog"
 import { profile } from "@/lib/profile"
+import { RelayDesk } from "@/components/relay-desk"
 
 const prompts = [
   "I have an interview next week for a platform role.",
@@ -50,7 +51,7 @@ function QuestionDesk({ initialQuestion }: { initialQuestion: string }) {
       <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Ask me</p>
       <h1 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Start with a question. Find your next step.</h1>
       <p className="mt-4 text-lg text-muted-foreground">
-        Tell me what you need. Explore related guides, then contact me on LinkedIn if you want to talk through your situation.
+        Tell me what you need. Explore related guides, or send me your question and read my reply here.
       </p>
 
       <form
@@ -88,6 +89,8 @@ function QuestionDesk({ initialQuestion }: { initialQuestion: string }) {
         </Button>
       </form>
 
+      <RelayDesk question={question} />
+
       {submitted ? (
         <section className="mt-10 space-y-4" aria-live="polite">
           <h2 className="font-serif text-2xl">
@@ -114,7 +117,7 @@ function QuestionDesk({ initialQuestion }: { initialQuestion: string }) {
           <div className="rounded-2xl bg-accent p-5">
             <h2 className="font-serif text-2xl">Continue on LinkedIn</h2>
             <p className="mt-3 text-sm leading-6 text-muted-foreground">
-              Copy this note, open my LinkedIn profile, and paste it into a message or connection request. Your question is not sent from this website. Any reply will be on LinkedIn.
+              Copy this note, open my LinkedIn profile, and paste it into a message or connection request. This is an alternative if website messaging is offline. Replies to LinkedIn messages stay on LinkedIn.
             </p>
             <pre className="mt-4 whitespace-pre-wrap rounded-xl bg-background p-4 text-sm leading-6">{preview}</pre>
             <div className="mt-4 flex flex-wrap gap-3">
@@ -126,7 +129,7 @@ function QuestionDesk({ initialQuestion }: { initialQuestion: string }) {
               </Button>
             </div>
             <p className="mt-3 text-sm text-muted-foreground" role="status">
-              {copyStatus === "failed" ? "Copy is unavailable in this browser. Select the note above and copy it manually." : copyStatus === "copied" ? "Copied. Paste the note into LinkedIn when you are ready." : "Nothing is sent until you choose to send it on LinkedIn."}
+              {copyStatus === "failed" ? "Copy is unavailable in this browser. Select the note above and copy it manually." : copyStatus === "copied" ? "Copied. Paste the note into LinkedIn when you are ready." : "This copied note is only sent when you choose to send it on LinkedIn."}
             </p>
           </div>
 

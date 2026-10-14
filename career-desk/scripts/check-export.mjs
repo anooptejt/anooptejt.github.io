@@ -12,7 +12,7 @@ await stat(join(root, ".nojekyll"))
 let checked = 0
 for (const page of pages) {
   const html = await readFile(join(root, page), "utf8")
-  assert(!/HUMAN_RELAY|\/api\/ask|question is queued|reply returns|My reply comes back/.test(html), `Obsolete relay text in ${page}`)
+  assert(!/X-Agent-Key|signing-key|api-key\.txt|\/api\/ask/.test(html), `Private backend information in ${page}`)
   for (const [, value] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     if (!value.startsWith("/")) continue
     const path = new URL(value.replaceAll("&amp;", "&"), "https://anooptejt.github.io").pathname

@@ -8,7 +8,11 @@
     "start": "node scripts/preview.mjs",
     "lint": "eslint",
     "check:export": "node scripts/check-export.mjs",
-    "test": "npm run lint && npm run build && npm run check:export"
+    "test": "npm run lint && npm run test:gateway && npm run build && npm run check:export",
+    "test:gateway": "node --test gateway/server.test.mjs",
+    "relay:start": "node scripts/relay-runtime.mjs start",
+    "relay:stop": "node scripts/relay-runtime.mjs stop",
+    "relay:status": "node scripts/relay-runtime.mjs status"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
