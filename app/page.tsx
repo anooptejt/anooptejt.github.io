@@ -674,6 +674,15 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="career-desk-section" aria-labelledby="career-desk-heading">
+          <div>
+            <p className="eyebrow">For people building a software career</p>
+            <h2 id="career-desk-heading">Ask Anoop Tej</h2>
+            <p>Career guidance, practical engineering guides, open source contributions, and interview preparation. Find your next step, then reach out on LinkedIn when you need a person.</p>
+          </div>
+          <a className="archive-link" href="/askanooptejthotapalli/">Visit the career desk ↗</a>
+        </section>
+
         <section className="publishing-section" id="insights">
           <div className="publishing-shell">
             <div className="publishing-intro">

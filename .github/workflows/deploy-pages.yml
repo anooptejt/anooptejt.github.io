@@ -34,6 +34,15 @@ jobs:
       - name: Export static portfolio
         run: npm run export:pages
 
+      - name: Build and verify career desk
+        working-directory: career-desk
+        run: |
+          npm ci
+          npm test
+
+      - name: Include career desk in portfolio
+        run: cp -R career-desk/out dist-pages/askanooptejthotapalli
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
