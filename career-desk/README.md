@@ -1,6 +1,6 @@
 # Ask Anoop Tej
 
-A career guidance website extending [Anoop’s engineering site](https://anooptejt.github.io/).
+A place to ask Anoop about any topic, extending [Anoop’s engineering site](https://anooptejt.github.io/).
 
 Public URL: https://anooptejt.github.io/askanooptejthotapalli/
 

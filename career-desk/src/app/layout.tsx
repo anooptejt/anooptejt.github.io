@@ -18,11 +18,11 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ask Anoop Tej | Career guidance for engineers",
+    default: "Ask Anoop Tej | Ask about anything",
     template: "%s · Ask Anoop Tej",
   },
   description:
-    "Career guidance in DevOps, platform engineering, CI/CD, Kubernetes, and AI-assisted delivery. Explore the guides and ask Anoop for a personal reply.",
+    "Ask Anoop Tej about anything on your mind: life, work, learning, technology, or an idea you want to explore. Send a question for a personal reply.",
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -52,27 +52,27 @@ export default function HomePage() {
               <ProfileLinks className="mt-1" />
             </div>
           </div>
-          <Badge variant="secondary" className="mt-6">For people building a software career</Badge>
+          <Badge variant="secondary" className="mt-6">Ask about anything</Badge>
           <h1 className="mt-5 font-serif text-5xl leading-[1.05] tracking-tight text-balance sm:text-6xl">
             When the next step needs a person, start here.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-muted-foreground">
-            I am Anoop. I have spent more than 17 years on delivery platforms. This desk is where you come for career guidance, the systems you operate, and interview practice that asks for judgment.
+            I am Anoop. Bring me whatever is on your mind: life, work, learning, technology, or an idea you want to explore. I will share what I know, help you think it through, or point you toward a useful next step.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button nativeButton={false} render={<Link href="/career" />} size="lg">
-              Start with career
-            </Button>
-            <Button nativeButton={false} render={<Link href="/ask" />} variant="outline" size="lg">
+            <Button nativeButton={false} render={<Link href="/ask" />} size="lg">
               Ask me a question
+            </Button>
+            <Button nativeButton={false} render={<Link href="/library" />} variant="outline" size="lg">
+              Explore the guides
             </Button>
           </div>
         </div>
         <aside className="rounded-3xl bg-primary px-6 py-6 text-primary-foreground">
-          <p className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">If the library stops</p>
-          <p className="mt-3 font-serif text-3xl leading-tight">Send me the missing topic.</p>
+          <p className="text-xs uppercase tracking-[0.16em] text-primary-foreground/70">A conversation starts here</p>
+          <p className="mt-3 font-serif text-3xl leading-tight">Your question does not need a category.</p>
           <p className="mt-3 text-sm leading-6 text-primary-foreground/85">
-            Find a guide for your question, or send it to me for a personal reply here.
+            A question about everyday life, a difficult choice, a new interest, or something entirely different. Send it to me for a personal reply here.
           </p>
           <Button nativeButton={false} render={<Link href="/ask" />} variant="secondary" className="mt-6" size="lg">
             Open the ask desk
@@ -80,7 +80,11 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <section className="mx-auto grid max-w-5xl gap-4 px-4 pb-8 sm:grid-cols-2">
+      <section className="mx-auto grid max-w-5xl gap-4 px-4 pb-8 sm:grid-cols-2" aria-labelledby="current-guides">
+        <div className="sm:col-span-2">
+          <h2 id="current-guides" className="font-serif text-3xl">Explore the current guides</h2>
+          <p className="mt-2 text-muted-foreground">The library starts with careers and technology. Your questions can go anywhere.</p>
+        </div>
         {doors.map((door) => (
           <Link key={door.href} href={door.href} className="rounded-2xl bg-card p-5 ring-1 ring-foreground/10 transition hover:bg-accent">
             <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">{door.index}</p>
@@ -91,7 +95,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-12">
-        <h2 className="font-serif text-3xl">Read the tool the way an interviewer will ask about it</h2>
+        <h2 className="font-serif text-3xl">From the technology library</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl bg-card ring-1 ring-foreground/10">
           {libraryGuides.map((guide) => (
             <li key={guide.slug}>

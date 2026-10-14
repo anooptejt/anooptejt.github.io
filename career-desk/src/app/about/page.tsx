@@ -7,7 +7,7 @@ import { profile } from "@/lib/profile"
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Career guidance, interview preparation, open source, and practical engineering guides from Anoop Tej Thotapalli.",
+  description: "A place to ask Anoop Tej Thotapalli about anything on your mind, share ideas, and explore your next step.",
 }
 
 export default function AboutPage() {
@@ -32,10 +32,10 @@ export default function AboutPage() {
           I am Anoop Tej Thotapalli, a father and an engineer. I have spent more than 17 years on delivery, cloud-native platforms, and the judgment around AI in that work.
         </p>
         <p>
-          Come here for career guidance, interviews, open source, and the documents on DevOps, CI/CD, Kubernetes, Docker, OpenShift, Argo CD, Spinnaker, GitHub Actions, and AI in delivery.
+          This is a place for anything on your mind: life, work, learning, relationships, technology, or an idea you want to explore. Bring your question. I will share what I know, help you think it through, or point you toward a useful next step.
         </p>
         <p>
-          The pages are a starting point. When you need something they do not cover, use Ask me to find related guides or send your question for a personal reply. LinkedIn is also available. I would rather receive a specific question than guess which topic to write next.
+          The current guides focus on careers and technology. They are one part of this space, and your question does not need to fit those topics. Use Ask me to send it for a personal reply. LinkedIn is also available.
         </p>
       </div>
       <div className="mt-8 flex flex-wrap gap-3">

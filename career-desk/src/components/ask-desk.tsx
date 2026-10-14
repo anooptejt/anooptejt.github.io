@@ -11,10 +11,10 @@ import { profile } from "@/lib/profile"
 import { RelayDesk } from "@/components/relay-desk"
 
 const prompts = [
-  "I have an interview next week for a platform role.",
-  "Which open source project should I start with?",
-  "I know Docker. What should I learn next?",
-  "How do I talk about work my manager already understands, when nobody else does?",
+  "I am facing a big decision. How can I think it through?",
+  "I want to learn something new. Where do I start?",
+  "I have an idea, but I am not sure how to begin.",
+  "I am considering a career change. What should I think about?",
 ]
 
 export function AskDesk() {
@@ -51,7 +51,7 @@ function QuestionDesk({ initialQuestion }: { initialQuestion: string }) {
       <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Ask me</p>
       <h1 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Start with a question. Find your next step.</h1>
       <p className="mt-4 text-lg text-muted-foreground">
-        Tell me what you need. Explore related guides, or send me your question and read my reply here.
+        Ask about anything on your mind: life, work, learning, technology, or something else entirely. Send me your question and read my reply here.
       </p>
 
       <form
@@ -62,13 +62,13 @@ function QuestionDesk({ initialQuestion }: { initialQuestion: string }) {
         }}
       >
         <label className="block text-sm font-medium" htmlFor="question">
-          What do you need guidance on?
+          What is on your mind?
         </label>
         <Textarea
           id="question"
           value={question}
           onChange={(event) => { setQuestion(event.target.value); setCopyStatus("idle"); setSubmitted(false) }}
-          placeholder="Example: I can write a pipeline, but I freeze when the interviewer asks whether I would deploy it."
+          placeholder="A question, a decision, an idea, or something you would like to talk through…"
           rows={5}
           maxLength={3000}
         />

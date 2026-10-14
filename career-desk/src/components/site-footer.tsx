@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div>
           <p className="font-serif text-lg">Ask Anoop Tej</p>
           <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-            Career guidance for people who build and run software.
+            Questions, ideas, and conversations about anything on your mind.
           </p>
         </div>
         <div className="flex flex-col gap-2 text-sm">

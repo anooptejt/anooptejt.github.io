@@ -6,11 +6,11 @@ import { profile } from "@/lib/profile"
 import { cn } from "@/lib/utils"
 
 const links = [
+  { href: "/ask", label: "Ask me" },
   { href: "/career", label: "Career" },
   { href: "/library", label: "Library" },
   { href: "/open-source", label: "Open source" },
   { href: "/interview", label: "Interview" },
-  { href: "/ask", label: "Ask me" },
 ]
 
 export function SiteHeader() {
@@ -23,7 +23,7 @@ export function SiteHeader() {
           <a href="https://anooptejt.github.io/" className="text-xs text-muted-foreground hover:underline">← Anoop’s engineering site</a>
           <Link href="/" className="mt-1 flex flex-wrap items-baseline gap-x-3">
             <span className="font-serif text-lg tracking-tight text-foreground sm:text-2xl">Ask Anoop Tej</span>
-            <span className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Career desk</span>
+            <span className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Ask about anything</span>
           </Link>
         </div>
         <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm" aria-label="Main">
