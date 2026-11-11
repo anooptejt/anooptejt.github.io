@@ -16,7 +16,6 @@ export function SiteFooter() {
       </p>
       <div className="footer-links">
         <Link href="/insights/">Writing &amp; Talks</Link>
-        <a href="/askanooptejthotapalli/">Ask Anoop Tej · Career desk</a>
         <a href="https://www.fiverr.com/anooptejt" target="_blank" rel="noreferrer">
           Fiverr ↗
         </a>

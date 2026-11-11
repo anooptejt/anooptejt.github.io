@@ -674,14 +674,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="career-desk-section" aria-labelledby="career-desk-heading">
-          <div>
-            <p className="eyebrow">Ask about anything</p>
-            <h2 id="career-desk-heading">Ask Anoop Tej</h2>
-            <p>Life, work, learning, technology, or anything else on your mind. Send Anoop a question for a personal reply.</p>
-          </div>
-          <a className="archive-link" href="/askanooptejthotapalli/">Ask Anoop a question ↗</a>
-        </section>
 
         <section className="publishing-section" id="insights">
           <div className="publishing-shell">

@@ -122,8 +122,6 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
 
-## Career desk extension
+## Ask Anoop Tej
 
-[Ask Anoop Tej](https://anooptejt.github.io/askanooptejthotapalli/) lives in `career-desk/` as an independent static Next.js site. Edit its guides in `career-desk/src/content/`. The Pages workflow runs its install, lint, build, and export checks, then copies `career-desk/out/` into `dist-pages/askanooptejthotapalli/` after exporting the portfolio. No separate hosting account or credentials are needed.
-
-To validate locally: run the portfolio’s `npm test`, then `cd career-desk && npm ci && npm test`. The root TypeScript and ESLint configurations exclude this independent project; it has its own checks.
+Ask Anoop Tej is a separate portal in its own repository. This workflow does not build or publish it.
